@@ -27,10 +27,10 @@ def everything_iterative(a, b, start_nodes, c=None, d=None):
     CLANS = True
 
     if CLANS:
-        prev_adj = make_clans(50)
+        prev_adj = make_clans(60)
         g = networkify(prev_adj)
-        draw_graph(g, -1, a, b, c, d)
-        i = 0
+        draw_graph(g, 0, a, b, c, d)
+        i = 1
     else:
         prev_adj = make_generation(0, a, b, c, d, start_nodes, None)
         i = 1
@@ -49,7 +49,7 @@ def do_everything(k, a, b, c=None, d=None):
 if __name__ == "__main__":
     # do_everything(5, .8, 0)
     # do_everything(5, .5, .5)
-    everything_iterative(.8, .6, 3, c=.4, d=.2)
+    everything_iterative(.8, .6, 5, c=.4, d=.2)
     # do_everything(5, 1, .8)
     # do_everything(5, 1, 0.7)
     # do_everything(5, 1, 0)
