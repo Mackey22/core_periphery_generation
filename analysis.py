@@ -11,18 +11,18 @@ def sort_dict_by_val(d):
 def make_title(a, b, c, d):
     title = "Force directed node layout for alpha: " + str(a) + ", beta: " + str(b)
     if c is not None:
-        title += ", c: " + str(c)
+        title += ", gamma: " + str(c)
     if d is not None:
-        title += ", d: " + str(d)
+        title += ", rho: " + str(d)
     return title
 
 
 def make_name(k, a, b, c, d):
     name = "alpha-" + str(a) + "_beta-" + str(b)
     if c is not None:
-        name += "_c-" + str(c)
+        name += "_gamma-" + str(c)
     if d is not None:
-        name += "_d-" + str(d)
+        name += "_rho-" + str(d)
     return name + "_i-" + str(k) + ".png"
 
 
@@ -31,7 +31,7 @@ def draw_graph(g, k, a, b, c, d, show=False):
     title = make_title(a, b, c, d)
     plt.title(title)
     name = make_name(k, a, b, c, d)
-    plt.savefig("graphs2/" + name)
+    plt.savefig("graphs3/" + name)
     if show:
         plt.show()
     plt.clf()

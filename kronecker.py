@@ -65,7 +65,7 @@ def prune_graph(acc, growth, prior_d):
     return acc
 
 
-def iterative_kronecker(start_nodes, round, alpha=0.7, beta=0.4, c=0.15, d=0.05, acc=None, growth=0.5, default=0.005):
+def iterative_kronecker(start_nodes, round, alpha=0.7, beta=0.4, c=0.15, d=0.05, acc=None, growth=0.4, default=0.005):
     # N = 3
     if start_nodes == 3:
         x = np.array([[alpha, alpha, beta], [alpha, alpha, alpha], [beta, alpha, alpha]])
